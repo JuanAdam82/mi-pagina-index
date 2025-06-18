@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .imagen-mascarada {
+      width: 300px;
+      height: 300px;
+      background-size: cover;
+      background-position: center;
+      margin: 20px;
+      display: inline-block;
+      
+      /* Máscara de círculo en SVG */
+      -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="white"/></svg>');
+      mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="white"/></svg>');
+      
+      -webkit-mask-size: cover;
+      mask-size: cover;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+    }
+  </style>
+</head>
+<body  style="background-color: rgb(207, 207, 207);">
+  <center>
+    <h1><b> VISTA DE MODELOS </b></h1><br><br>
+
+<style>
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+
+    /* Posición del tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Arriba del elemento */
+    left: 50%;
+    margin-left: -60px;
+
+    /* Transición */
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+</style>
+
+<div class="tooltip">
+  <div class="imagen-mascarada" style="background-image: url('f1.jpg');"></div>
+  <span class="tooltiptext">Modelo F1</span>
+</div>
+<div class="tooltip">
+  <div class="imagen-mascarada" style="background-image: url('f9.jpeg');"></div>
+  <span class="tooltiptext">Modelo F9</span>
+</div>
+<div class="tooltip">
+  <div class="imagen-mascarada" style="background-image: url('heavy.jpeg');"></div>
+  <span class="tooltiptext">Modelo Heavy</span>
+</div>
+<div class="tooltip">
+  <div class="imagen-mascarada" style="background-image: url('csx.png');"></div>
+  <span class="tooltiptext">Modelo csx</span>
+</div>
+<div class="tooltip">
+  <div class="imagen-mascarada" style="background-image: url('d2.jpg');"></div>
+  <span class="tooltiptext">Modelo dragon space</span>
+</div>
+<div class="tooltip">
+  <div class="imagen-mascarada" style="background-image: url('star.jpeg');"></div>
+  <span class="tooltiptext">Modelo star</span>
+</div>
+
+    <!-- Imagen 1 -->
+    
+  </center>
+</body>
+</html>

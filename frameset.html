@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+ <style>
+    /* Reset y estilos básicos */
+    * {
+      box-sizing: border-box;
+    }
+    body, html {
+      margin: 0; padding: 0; height: 100vh; font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: row;
+      overflow: hidden;
+    }
+
+    /* Contenedor de toda la página */
+    .container {
+      display: flex;
+      flex: 1;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Barra lateral izquierda */
+    .sidebar {
+      flex: 0 0 320px;
+      background: #f0f0f0;
+      border-right: 1px solid #ccc;
+      overflow: auto;
+    }
+    .sidebar iframe {
+      width: 100%;
+      height: 100vh;
+      border: none;
+    }
+
+    /* Contenedor derecho */
+    .right-panel {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Frame superior derecho */
+    .top-frame {
+      flex: 0 0 120px;
+      border-bottom: 1px solid #ccc;
+      overflow: hidden;
+    }
+    .top-frame iframe {
+      width: 100%;
+      height: 120px;
+      border: none;
+    }
+
+    /* Frame inferior derecho */
+    .bottom-frame {
+      flex: 1;
+      overflow: auto;
+    }
+    .bottom-frame iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Responsividad: en pantallas pequeñas apilar verticalmente */
+    @media (max-width: 700px) {
+      body, html {
+        flex-direction: column;
+      }
+      .sidebar {
+        flex: 0 0 150px;
+        height: 150px;
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+      }
+      .sidebar iframe {
+        height: 150px;
+      }
+      .right-panel {
+        flex: 1;
+        height: calc(100vh - 150px);
+      }
+      .top-frame {
+        flex: 0 0 80px;
+        height: 80px;
+      }
+      .top-frame iframe {
+        height: 80px;
+      }
+      .bottom-frame {
+        flex: 1;
+      }
+    }
+  </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESLA</title>
+    <frameset cols="160,*">
+    <frame id="frmIzquierdo" name="frmIzquierdo" src="pagina2.html"/>
+
+    <frameset rows="120,*">
+        <frame id="frmSuperior" name="frmSuperior" src="index.html"/>
+
+        <frame id="frmInferior" name="frmInferior" src="pagina3.html"/>
+    </frameset>
+
+<noframes>
+    <body>Su navegador no soporta frames</body>
+    </noframes>
+</frameset>
+</head>
+<body>
+    
+</body>
+</html>
